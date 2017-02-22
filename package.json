@@ -1,0 +1,26 @@
+{
+  "name": "syson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "v1.5.11",
+    "angular-animate": "v1.5.11",
+    "angular-aria": "v1.5.11",
+    "angular-local-storage": "v0.5.2",
+    "angular-material": "v1.1.3",
+    "angular-material-sidemenu": "v1.0.2",
+    "angular-messages": "v1.6.2",
+    "angular-toastr": "v2.1.1",
+    "angular-ui-grid": "^4.0.2",
+    "angular-ui-router": "^0.4.2",
+    "jquery": "v3.1.1",
+    "material-design-icons": "v3.0.1",
+    "materialize-css": "^0.98.0"
+  }
+}

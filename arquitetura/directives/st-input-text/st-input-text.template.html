@@ -1,0 +1,14 @@
+<md-input-container>
+    <label ng-bind="templateLabel"></label>
+    <input type="text"
+           name="{{::templateInputName}}"
+           ng-model="ngModel"
+           required="templateRequired"
+           md-maxlength="{{templateTamanhoMaximo}}"
+           minlength="{{templateTamanhoMinimo}}">
+
+    <div ng-messages="templateFormCtrl[templateInputName].$error"
+         ng-show="templateFormCtrl[templateInputName].$invalid && templateFormCtrl[templateInputName].$touched">
+        <div ng-messages-include="templates/ng-messages.html"></div>
+    </div>
+</md-input-container>
