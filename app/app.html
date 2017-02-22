@@ -72,12 +72,12 @@
         <md-content>
             <md-list>
                 <md-sidemenu locked="true">
+                    <md-subheader class="md-no-sticky">Menu</md-subheader>
                     <md-sidemenu-group>
-                        <md-button ng-click="vm.alterarRota('dashboard')">Dashboard</md-button>
+                        <md-sidemenu-content ng-click="vm.alterarRota('dashboard')" md-icon="&#xE1AF;" md-heading="Dashboard" >
+                        </md-sidemenu-content>
                     </md-sidemenu-group>
-                    <md-divider></md-divider>
                     <md-sidemenu-group>
-                        <md-subheader class="md-no-sticky">Menu</md-subheader>
                         <md-sidemenu-content md-icon="supervisor_account" md-heading="Menu1" md-arrow="true">
                             <md-button ng-click="vm.alterarRota('dashboard')">Protocologo1</md-button>
                             <md-button ng-click="vm.alterarRota('dashboard')">Protocologo2</md-button>
