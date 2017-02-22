@@ -1,0 +1,20 @@
+<div class="row">
+    <div ng-class="templateClassTamanho">
+        <input ng-class="templateFormCtrl[templateName].$invalid
+         && templateFormCtrl[templateName].$touched ?  'invalid' : 'valid'"
+               type="{{templateTipo}}"
+               id="{{templateName}}"
+               name="{{templateName}}"
+               ng-model="ngModel"
+               minlength="{{templateTamanhoMinimo}}"
+               maxlength="{{templateTamanhoMaximo}}"
+               placeholder="{{templatePlaceHolder}}"
+               ng-required="ngRequired">
+        <label ng-show="!placeholder" for="{{templateName}}">{{templateLabel}}</label>
+        <div class="help-block"
+             ng-messages="templateFormCtrl[templateName].$error"
+             ng-show="templateFormCtrl[templateName].$invalid && templateFormCtrl[templateName].$touched">
+            <div ng-messages-include="assets/templates/ng-messages.html"></div>
+        </div>
+    </div>
+</div>

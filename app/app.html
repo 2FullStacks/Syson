@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
 
     <!-- CSS Externos -->
+    <link rel="stylesheet" href="assets/css/app.css">
 
     <!-- JS Internos -->
     <script src="../node_modules/jquery/dist/jquery.js"></script>
@@ -36,11 +37,7 @@
     <script src="controller/index.controller.js"></script>
 
     <!-- JS Externos Arquitetura -->
-    <script src="../arquitetura/directives/st-crud/st-crud.directive.js"></script>
-    <script src="../arquitetura/directives/st-input-text/st-input-text.directive.js"></script>
-    <script src="../arquitetura/services/st-alert.services.js"></script>
-    <script src="../arquitetura/services/st-services.js"></script>
-    <script src="../arquitetura/services/st-storage.service.js"></script>
+    <script src="../arquitetura/directives/fs-input-text/fs-input-text.directive.js"></script>
 
 </head>
 <body ng-controller="IndexController as vm" ng-cloak>
@@ -58,7 +55,7 @@
 <div class="row">
     <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
 
-        <md-toolbar layout="row" style="height: 200px;" class="orange accent-4">
+        <md-toolbar layout="row" class="orange accent-4 menu-lateral">
             <div class="md-toolbar-tools orange accent-4">
                 <h2 md-truncate flex>Syson</h2>
                 <span flex></span>
@@ -82,7 +79,7 @@
                     <md-sidemenu-content md-icon="supervisor_account"
                                          md-heading="Menu1"
                                          md-arrow="true">
-                        <md-button ng-click="vm.alterarRota('dashboard')">
+                        <md-button ng-click="vm.alterarRota('protocolo')">
                             <md-icon class="material-icons">note_add</md-icon>
                             Protocolo
                         </md-button>
