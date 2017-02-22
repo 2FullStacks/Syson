@@ -6,27 +6,28 @@
 		.controller('IndexController', IndexController);
 
 	/* @ngInject */
-	function IndexController($state,$mdSidenav) {
+	function IndexController($state, $mdSidenav) {
 
 		var vm = this;
 
-        vm.openSideNavPanel = openSideNavPanel;
-        vm.closeSideNavPanel = closeSideNavPanel;
-        vm.showMobileMainHeader = true;
+		vm.showMobileMainHeader = true;
+
 		vm.alterarRota = alterarRota;
+		vm.openSideNavPanel = openSideNavPanel;
+		vm.closeSideNavPanel = closeSideNavPanel;
 
 		function alterarRota(rota) {
 			$state.go(rota);
-            closeSideNavPanel();
+			closeSideNavPanel();
 		}
 
-        function openSideNavPanel() {
-            $mdSidenav('left').open();
-        }
+		function openSideNavPanel() {
+			$mdSidenav('left').open();
+		}
 
-        function closeSideNavPanel() {
-            $mdSidenav('left').close();
-        }
+		function closeSideNavPanel() {
+			$mdSidenav('left').close();
+		}
 	}
 
 })();

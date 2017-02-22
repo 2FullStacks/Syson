@@ -21,6 +21,6 @@
     "angular-ui-router": "^0.4.2",
     "jquery": "v3.1.1",
     "material-design-icons": "v3.0.1",
-    "materialize-css": "^0.98.0"
+    "materialize-css": "v0.98.0"
   }
 }

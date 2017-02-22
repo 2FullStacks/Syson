@@ -3,14 +3,15 @@
 
 	angular
 		.module('app',
-            ['ui.router',
-                'ngAria',
-                'ngAnimate',
-                'ngMaterial',
-                'toastr',
-                'ngMessages',
-                'ui.grid',
-                'LocalStorageModule',
-                'ngMaterialSidemenu'
-            ]);
+			[
+				'ui.router',
+				'ngAria',
+				'ngAnimate',
+				'ngMaterial',
+				'toastr',
+				'ngMessages',
+				'ui.grid',
+				'LocalStorageModule',
+				'ngMaterialSidemenu'
+			]);
 })();

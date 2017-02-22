@@ -1,16 +1,14 @@
 (function () {
-    'use strict';
+	'use strict';
 
-    angular
-        .module('appLogin')
-        .controller('LoginController', LoginController);
+	angular
+		.module('appLogin')
+		.controller('LoginController', LoginController);
 
-    /* @ngInject */
-    function LoginController() {
-        var vm = this;
+	/* @ngInject */
+	function LoginController() {
+		var vm = this;
 
 
-    }
-
+	}
 })();
-
