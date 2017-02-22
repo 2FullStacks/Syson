@@ -10,8 +10,6 @@
 
 		var vm = this;
 
-		vm.showMobileMainHeader = true;
-
 		vm.alterarRota = alterarRota;
 		vm.openSideNavPanel = openSideNavPanel;
 		vm.closeSideNavPanel = closeSideNavPanel;
@@ -29,6 +27,4 @@
 			$mdSidenav('left').close();
 		}
 	}
-
 })();
-

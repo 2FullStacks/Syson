@@ -9,6 +9,5 @@
 	function LoginController() {
 		var vm = this;
 
-
 	}
 })();

@@ -4,14 +4,14 @@
 	angular
 		.module('app',
 			[
-				'ui.router',
+				'LocalStorageModule',
 				'ngAria',
 				'ngAnimate',
 				'ngMaterial',
-				'toastr',
+				'ngMaterialSidemenu',
 				'ngMessages',
+				'toastr',
 				'ui.grid',
-				'LocalStorageModule',
-				'ngMaterialSidemenu'
+				'ui.router'
 			]);
 })();

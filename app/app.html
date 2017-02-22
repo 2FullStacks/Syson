@@ -30,9 +30,10 @@
     <script src="../node_modules/materialize-css/bin/materialize.js"></script>
     <script src="../node_modules/angular-material-sidemenu/dest/angular-material-sidemenu.js"></script>
 
-    <!-- JS Externos Principal-->
+    <!-- JS Externos Principal -->
     <script src="config/app.module.js"></script>
     <script src="config/routes.js"></script>
+    <script src="controller/index.controller.js"></script>
 
     <!-- JS Externos Arquitetura -->
     <script src="../arquitetura/directives/st-crud/st-crud.directive.js"></script>
@@ -40,65 +41,61 @@
     <script src="../arquitetura/services/st-alert.services.js"></script>
     <script src="../arquitetura/services/st-services.js"></script>
     <script src="../arquitetura/services/st-storage.service.js"></script>
-    <script src="controller/index.controller.js"></script>
 
 </head>
 <body ng-controller="IndexController as vm" ng-cloak>
 
-<nav class="navbar navbar-light bg-faded orange accent-4">
+<nav class="navbar orange accent-4">
     <a ng-click="vm.alterarRota('dashboard')" class="brand-logo center">Syson</a>
-    <div class="collapse" id="exCollapsingNavbar">
-        <md-button class="md-icon-button" aria-label="Side Panel" ng-click="vm.openSideNavPanel()">
-            <md-tooltip>Menu</md-tooltip>
-            <md-icon class="white-text material-icons">&#xE5D2;</md-icon>
-        </md-button>
-    </div>
-
+    <md-button class="md-icon-button collapse"
+               aria-label="Menu Lateral"
+               ng-click="vm.openSideNavPanel()">
+        <md-tooltip>Menu</md-tooltip>
+        <md-icon class="material-icons white-text">menu</md-icon>
+    </md-button>
 </nav>
+
 <div class="row">
     <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
 
-        <md-toolbar layout="row" style="height: 200px; background-color: #0D47A1" class="orange accent-4">
+        <md-toolbar layout="row" style="height: 200px;" class="orange accent-4">
             <div class="md-toolbar-tools orange accent-4">
-                <h2><span>Syson</span></h2>
+                <h2 md-truncate flex>Syson</h2>
                 <span flex></span>
-                <md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="vm.closeSideNavPanel()">
+                <md-button class="md-icon-button" aria-label="Fechar Menu Lateral" ng-click="vm.closeSideNavPanel()">
                     <md-tooltip>Fechar</md-tooltip>
-                    <md-icon class="material-icons">&#xE5CD;</md-icon>
+                    <md-icon class="material-icons">close</md-icon>
                 </md-button>
             </div>
         </md-toolbar>
 
         <md-content>
-            <md-list>
-                <md-sidemenu locked="true">
-                    <md-subheader class="md-no-sticky">Menu</md-subheader>
-                    <md-sidemenu-group>
-                        <md-sidemenu-content md-icon="dashboard" ng-click="vm.alterarRota('dashboard')"  md-heading="Dashboard">
-                        </md-sidemenu-content>
-                    </md-sidemenu-group>
-                    <md-sidemenu-group>
-                        <md-sidemenu-content md-icon="supervisor_account" md-heading="Menu1" md-arrow="true">
-                            <md-button ng-click="vm.alterarRota('dashboard')">Protocologo1</md-button>
-                            <md-button ng-click="vm.alterarRota('dashboard')">Protocologo2</md-button>
-                        </md-sidemenu-content>
-                    </md-sidemenu-group>
-                    <md-sidemenu-group>
-                        <md-sidemenu-content md-icon="account_balance" md-heading="Menu2" md-arrow="true">
-                            <md-button ng-click="vm.alterarRota('dashboard')">aquiMaisOpcoes
-                            </md-button>
-                            <md-button ng-click="vm.alterarRota('dashboard')">aquiMaisOpcoes
-                            </md-button>
-                        </md-sidemenu-content>
-                    </md-sidemenu-group>
-                </md-sidemenu>
-            </md-list>
+            <md-sidemenu>
+                <md-subheader>Menu</md-subheader>
+                <md-sidemenu-group>
+                    <md-sidemenu-content md-icon="dashboard"
+                                         ng-click="vm.alterarRota('dashboard')"
+                                         md-heading="Dashboard">
+                    </md-sidemenu-content>
+                </md-sidemenu-group>
+                <md-sidemenu-group>
+                    <md-sidemenu-content md-icon="supervisor_account"
+                                         md-heading="Menu1"
+                                         md-arrow="true">
+                        <md-button ng-click="vm.alterarRota('dashboard')">
+                            <md-icon class="material-icons">note_add</md-icon>
+                            Protocolo
+                        </md-button>
+                    </md-sidemenu-content>
+                </md-sidemenu-group>
+            </md-sidemenu>
         </md-content>
     </md-sidenav>
 </div>
 
-<ui-view>
-</ui-view>
-
+<div class="container">
+    <ui-view>
+    </ui-view>
+</div>
 </body>
 </html>
